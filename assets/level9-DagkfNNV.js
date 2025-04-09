@@ -1,0 +1,1 @@
+const l=9,o=8,e=6,s=["M","M","C","C","J","J","A","A","L","L","F","F","B","B","H","H","E","E","G","G","A","A","B","B","M","M","D","D","F","F","K","K","L","L","C","C","H","H","G","G","E","E","J","J","D","D","K","K"],t={level:9,rows:8,cols:6,tiles:s};export{e as cols,t as default,l as level,o as rows,s as tiles};
