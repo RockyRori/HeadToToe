@@ -1,12 +1,14 @@
 #root {
-    max-width: 1280px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: clamp(1rem, 4vw, 2rem);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .logo {
-    height: 6em;
+    height: clamp(4em, 15vw, 6em);
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
@@ -31,31 +33,28 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
+    .logo.spin {
         animation: logo-spin infinite 20s linear;
     }
 }
 
 .card {
-    padding: 2em;
+    padding: clamp(1rem, 3vw, 2em);
+    border-radius: 8px;
+    background-color: #ffffffdd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 600px;
 }
 
 .read-the-docs {
     color: #888;
+    font-size: clamp(14px, 3vw, 16px);
+    margin-top: 1rem;
 }
 
-/* 针对手机端 */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-        /* 调整字体、间距等 */
-    }
-}
-
-/* 针对桌面端 */
-@media (min-width: 769px) {
-    .container {
-        padding: 20px;
-        /* 更多桌面样式设定 */
-    }
+/* 容器适配：用于局部组件样式（可选） */
+.container {
+    padding: clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
