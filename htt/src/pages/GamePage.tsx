@@ -11,7 +11,7 @@ interface LevelConfig {
     tiles: string[];
 }
 
-const TOTAL_LEVELS = 10
+const TOTAL_LEVELS = 11
 
 // 提示颜色数组，每次提示将依次使用其中一种颜色
 const hintColors = [
@@ -264,6 +264,18 @@ const GamePage: React.FC = () => {
                     ))}
                 </div>
             )}
+            <div className="info">
+                {gameStatus === "failed" && (
+                    <span className="info-item failed">游戏结束</span>
+                )}
+                {gameStatus === "succeeded" && (
+                    <span className="info-item succeeded">恭喜通关</span>
+                )}
+                {gameStatus === "playing" && (
+                    <span className="info-item">倒计时：{countDown}</span>
+                )}
+                <span className="info-item">剩余对数：{computeRemainingPairs()}</span>
+            </div>
         </div>
     )
 }
