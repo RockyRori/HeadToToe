@@ -153,7 +153,7 @@ const GamePage: React.FC = () => {
                     setFirstSelection(null)
                     setSecondSelection(null)
                     setProcessing(false)
-                }, 500)
+                }, 200)
             } else {
                 // 不匹配，保持 800ms 后翻回
                 setTimeout(() => {
@@ -167,7 +167,7 @@ const GamePage: React.FC = () => {
                     setFirstSelection(null)
                     setSecondSelection(null)
                     setProcessing(false)
-                }, 800)
+                }, 400)
             }
         }
     }
@@ -238,8 +238,8 @@ const GamePage: React.FC = () => {
 
     return (
         <div className="game-page">
-            <h1>HeadToToe 对对碰</h1>
             {renderLevelList()}
+            <h1>HeadToToe 对对碰</h1>
             <div className="hint-section">
                 <button className="hint-btn" onClick={handleHintClick}>
                     提示 ({hintCount})

@@ -49,14 +49,14 @@
 .info {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    /* gap: 10px; */
     font-size: clamp(14px, 4vw, 16px);
     justify-content: center;
 }
 
 .info-item {
     background-color: #f0f0f0;
-    padding: 6px 10px;
+    /* padding: 6px 10px; */
     border-radius: 4px;
 }
 
@@ -72,8 +72,9 @@
 
 .board {
     display: grid;
-    gap: 2vw;
-    max-width: 100%;
+    gap: 1vw;
+    max-width: 20%;
+    max-height: 30%;
     margin: 0 auto;
     padding: 2vw;
     box-sizing: border-box;
